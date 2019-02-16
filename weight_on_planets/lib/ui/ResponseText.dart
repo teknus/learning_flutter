@@ -10,11 +10,13 @@ class ResponseText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          "$weightResult",
-          style: TextStyle(
-              color: Colors.cyan, fontSize: 20, fontWeight: FontWeight.w500),
-        )
+       Container( 
+			   child:Text(
+          			"$weightResult From Vim",
+          			style: TextStyle(
+              		color: Colors.cyan, fontSize: 16, fontWeight: FontWeight.w500),
+        		)
+		)
       ],
     );
   }
