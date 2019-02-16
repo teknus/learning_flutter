@@ -20,7 +20,11 @@ class Home extends StatefulWidget {
 		if(_ageControl.text.isNotEmpty && 
 		   _weightControl.text.isNotEmpty && 
 		   _heightControl.text.isNotEmpty){
-			num calculate_result = bmi(num.parse(_heightControl.text),num.parse(_weightControl.text));
+		  num age = num.parse(_ageControl.text);
+		  num weight = num.parse(_weightControl.text);
+		  num height = num.parse(_heightControl.text);
+		 if(age >= 0 && weight > 0 && height > 0){
+			num calculate_result = bmi(height,weight);
 			if(calculate_result < 18.5){
 				stage = "Under Weight";
 			} else if (calculate_result < 25){
@@ -31,6 +35,10 @@ class Home extends StatefulWidget {
 				stage = "Obese";
 			}
 			_result = "Your BMI is ${calculate_result.toStringAsFixed(2)}";
+		 } else {
+		 	_result = "Please valid data";
+			stage = "";
+		 }
 		} else{
 			_result = "Please enter your data";
 		   stage = "";
