@@ -48,8 +48,9 @@ class Home extends StatefulWidget {
             ),
 			backgroundColor: Colors.white,
 			body: new Container(
+				margin: const EdgeInsets.all (3.0),
 				alignment: Alignment.center,
-				child: ListView(
+				child: ListView(	
 					padding: EdgeInsets.all(4),
 					children: <Widget>[
 						Image.asset('images/bmilogo.png',width:120, height:120),
@@ -57,21 +58,24 @@ class Home extends StatefulWidget {
 							controller: _ageControl,
 							keyboardType: TextInputType.number,
 							decoration: InputDecoration(
-							hintText: "Age",
+							labelText: "Age",
+							hintText: "e.g: 34",
 							icon: Icon(Icons.person)),
 						),
 						TextField(
 							controller: _heightControl,
 							keyboardType: TextInputType.number,
 							decoration: InputDecoration(
-							hintText: "Height in meters",
+							labelText: "Height in meters",
+							hintText:"e.g: 1.80",
 							icon: Icon(Icons.insert_chart)),
 						),
 						TextField(
 							controller: _weightControl,
 							keyboardType: TextInputType.number,
 							decoration: InputDecoration(
-							hintText: "Weight in kg",
+							labelText: "Weight in kg",
+							hintText: "e.g: 80",
 							icon: Icon(Icons.line_weight)),
 						),
 						SizedBox(
