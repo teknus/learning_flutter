@@ -111,8 +111,8 @@ class Home extends StatefulWidget {
 							height: 10.0,
 						),
 						Container(
-  			                height: 50.0,
-			                width: 20.0,
+  			      height: 50.0,
+			        width: 20.0,
 							child: RaisedButton(
 							 onPressed: _calculate,
 							 color: pinkTheme,
